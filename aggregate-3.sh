@@ -1,12 +1,13 @@
 #!/bin/bash
 
+BASE=${BASE:-by}
 ENTITY='SMA Keck NRAO Subaru ATLAS MOPS PS_PS UH88 EAO_JAC IRTF CFHT'
 #ENTITY='EAO_JAC'
 SUFFIX="$1-$2"
 export FROM="$1"
 export TO="$2"
-OUTFILE=from_uh-classC-$SUFFIX.csv
-OUTFILE2=from_uh-AS-$SUFFIX.csv
+OUTFILE=from-${BASE}-classC-$SUFFIX.csv
+OUTFILE2=from-${BASE}-AS-$SUFFIX.csv
 
 rm -f $OUTFILE $OUTFILE.tmp
 
